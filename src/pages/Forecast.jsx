@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FaSpinner } from 'react-icons/fa';
+
 
 const Forecast = () => {
   const [city, setCity] = useState('');
@@ -47,7 +49,13 @@ const Forecast = () => {
       </div>
 
       {/* Forecast Display */}
-      {loading && <p>Loading...</p>}
+      {loading && (
+        <div className="flex justify-center items-center my-6 text-sky-600 text-2xl">
+          <FaSpinner className="animate-spin mr-2" />
+          Fetching forecast...
+        </div>
+      )}
+
 
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
         {forecastData.map((forecast, index) => (
