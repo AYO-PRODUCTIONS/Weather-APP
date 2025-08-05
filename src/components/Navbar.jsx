@@ -32,7 +32,7 @@ const Navbar = () => {
           menuOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="flex flex-col items-center gap-4 text-white text-[18px] mt-4">
+        <div className="bg-blue-500 flex flex-col items-center py-3 gap-4 rounded-4xl text-white text-[18px] mt-4">
           <Link to="/" className="hover:text-blue-900" onClick={() => setMenuOpen(false)}>Home</Link>
           <Link to="/forecast" className="hover:text-blue-900" onClick={() => setMenuOpen(false)}>Forecast</Link>
           <Link to="/about" className="hover:text-blue-900" onClick={() => setMenuOpen(false)}>About</Link>
